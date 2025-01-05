@@ -10,6 +10,20 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    // first solution:
+    // let mut i = 1;
+    // for val in 1..num+1 {
+    //     i *= val;
+    // }
+    // i
+
+    // second solution
+    #[allow(clippy::unnecessary_fold)]
+    (2..=num).fold(1, |acc, x| acc * x)
+
+    // third solution (2..=num).product()
+
 }
 
 fn main() {
